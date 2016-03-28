@@ -1,0 +1,38 @@
+/*******************
+	HERO
+*******************/
+
+.hero {
+	background-image: url("bannersmoky.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100px;
+}
+
+.hero-nav {
+	float: right;
+	width: 280px;
+	background-color: #3B3B3B;
+	margin: 32px 50px 0 0;
+	height: 33px;
+	padding: 4px 0;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.hero-nav-a {
+	list-style-type: none;
+	display: inline-block;
+	font-size: 14px;
+	float: left;
+	margin: 0 8px;
+	padding: 3px;
+	color: #A6A6A6;
+}
+
+.hero-nav-a:hover {
+	background-color: gray;
+	cursor: pointer;
+	border-radius: 5px;
+	color: white;
+}
