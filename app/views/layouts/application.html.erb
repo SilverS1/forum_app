@@ -8,6 +8,25 @@
 </head>
 <body>
 
+	<header class = "header group">
+		
+		<% if user_signed_in? %>
+			<div>
+				<%= image_tag('yang.png', class: "section-page-recent-user group") %>
+				<%= current_user.username %>
+				<%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "header-register group" %>
+			</div>
+		<% else %>
+			<div class = "header-logged-out group">
+				<%= image_tag('key.png', class: "signin-logo group" ) %>
+				<%= link_to "Sign In", new_user_session_path, class: "header-sign-in group" %>
+				<%= image_tag('register.png', class: "register-logo group" ) %>
+				<%= link_to "Register", new_user_registration_path, class: "header-register group" %>
+			</div>
+		<% end %>
+		
+	</header>
+
 <%= yield %>
 
 </body>
