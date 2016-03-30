@@ -18,27 +18,15 @@
 			<div class = "section-title group">
 				<h1 class = "section-title-words group" >Main</h1>
 			</div>
-	
-			<div class = "section-page group">
 			
-				<div class = "section-page-left group">
-					<%= link_to "Title", '#', class: "section-page-title group" %>
-					<p class = "section-page-description group">The best section in the world yay :)</p>
-				</div>
-				<div class = "section-page-right group">
-					<div class = "section-page-stats group">
-						<p class = "section-page-threads group">1234 Threads</p>
-						<p class = "section-page-posts group">183926 Posts</p>
-					</div>
-					<div class = "section-page-recent-thread-section">
-						<%= image_tag("yang.png", class: "section-page-recent-user group") %>
-						<div class = "section-page-recent-thread-section-2">
-							<%= link_to "Thready thready thread", '#', class: "section-page-recent-thread-title" %>
-							<p class = "section-page-recent-thread group">123Epicm</p>
-						</div>
-					</div>
-				</div>
+			<div class = "sections">
+			
+			<% @subforums.each do |subforum| %>
 	
+				<%= render subforum %>
+				
+			<% end %>
+			
 			</div>
 			
 			

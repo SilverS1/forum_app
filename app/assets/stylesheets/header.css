@@ -6,23 +6,24 @@
 	width: 100%;
 	height: 37px;
 	background: linear-gradient(to bottom, #525252 0%,#525252 50%,#525252 50%,#3B3B3B 50%,#3B3B3B 100%);
-	padding: 10px 3%;
+	padding: 0 3%;
 	color: white;
 }
 
 .header-logged-out {
 	float: left;
 	line-height: 1px;
-}
-
-.header-sign-in {
-	margin: 0 20px 0 8px;
-	float: left;
+	margin: 10px;
 }
 
 .signin-logo {
 	height: 15px;
 	width: 15px;
+	float: left;
+}
+
+.header-sign-in {
+	margin: 0 20px 0 8px;
 	float: left;
 }
 
@@ -39,4 +40,26 @@
 
 .main-wrapper {
 	margin: 0 5%;
+}
+
+.header-logged-in {
+	float: left;
+	margin: 5px;
+}
+
+.header-profile-pic {
+	height: 25px;
+	width: 25px;
+	float: left;
+	margin-top: 2px;
+}
+
+.header-username {
+	margin: 6px 20px 0 8px;
+	float: left;
+}
+
+.header-logout {
+	margin: 6px 20px 0 8px;
+	float: left;
 }

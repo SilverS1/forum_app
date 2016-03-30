@@ -1,0 +1,27 @@
+<div class = "section-page group">
+			
+	<div class = "section-page-left group">
+		<%= link_to subforum.title, subforum_path(subforum), class: "section-page-title group" %>
+		<p class = "section-page-description group"><%= subforum.description %></p>
+	</div>
+	<div class = "section-page-right group">
+		<div class = "section-page-stats group">
+			<p class = "section-page-threads group">1234 Threads</p>
+			<p class = "section-page-posts group">183926 Posts</p>
+		</div>
+		<div class = "section-page-recent-thread-section">
+			<%= image_tag("yang.png", class: "section-page-recent-user group") %>
+			<div class = "section-page-recent-thread-section-2">
+				
+				<% subforum.topics.order("created_at DESC").limit(1).each do |topic| %>
+					<p class = "section-page-recent-thread-title"><%= topic.title %></p>
+					<p class = "section-page-recent-thread group">123Epicm</p>
+				<% end %>
+				
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+			

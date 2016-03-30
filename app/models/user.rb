@@ -18,19 +18,6 @@ def validate_username
   end
 end
 
-# def self.find_first_by_auth_conditions(warden_conditions)
-#   conditions = warden_conditions.dup
-#   signin = conditions.delete(:signin)
-#   where(conditions).where(["lower(username) = :value OR lower(email) =
-#     :value", {:value => signin.downcase }]).first
-# end
-
-# def self.find_first_by_auth_conditions(warden_conditions)
-#   conditions = warden_conditions.dup
-#   where(conditions).where(["lower(username) = :value OR lower(email)
-#     = :value", {:value => signin.downcase }]).first
-# end
-
 def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
