@@ -1,7 +1,10 @@
+<p><%= link_to "Create a Topic", new_subforum_topic_path(@subforum) %></p>
+
 <% @subforum.topics.each do |topic| %>
 	<%= link_to topic.title, topic_path(topic) %>
 	<%= topic.content %>
 	<%= topic.user_id %>
 	<%= topic.subforum_id %>
+	<%= topic.user.username %>
 	<br>
 <% end %>

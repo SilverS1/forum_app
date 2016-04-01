@@ -12,7 +12,7 @@
 		
 		<% if user_signed_in? %>
 			<div class = "header-logged-in group" >
-				<%= image_tag('yang.png', class: "header-profile-pic group") %>
+				<%= image_tag(current_user.avatar, class: "header-profile-pic group") %>
 				<%= link_to current_user.username , '#', class: "header-username group" %>
 				<%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "header-logout group" %>
 			</div>

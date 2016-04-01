@@ -8,11 +8,7 @@
 			<%= f.label :content %>
 			<%= f.text_field :content, class: "form-control" %>
 		 
-		 	<% if current_page?(controller: 'topics', action: 'new') %>
-				<%= f.submit  "Create Subforum", class: "btn btn-primary", data: {disable_with: "Creating..."} %> 
-			<% else current_page?(controller: 'topics', action: 'edit') %>
-				<%= f.submit  "Edit Subforum", class: "btn btn-primary", data: {disable_with: "Updating..."} %>
-			<% end %>
+			<%= f.submit  "Submit", class: "btn btn-primary", data: {disable_with: "Creating..."} %>
 		  
 		<% end %>
 	</div>

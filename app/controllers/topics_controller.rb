@@ -13,7 +13,7 @@ class TopicsController < ApplicationController
 		@topic = @subforum.topics.new(topic_params)
 		@topic.user_id = current_user.id
 		if @topic.save
-			redirect_to root_url
+			redirect_to @subforum
 		else
 			render 'new'
 		end
@@ -26,7 +26,7 @@ class TopicsController < ApplicationController
 	def update
 		@topic = Topic.find(params[:id])
 		if @topic.update_attributes(topic_params)
-			redirect_to root_url
+			redirect_to @topic
 		else
 			render 'edit'
 		end

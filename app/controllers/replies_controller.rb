@@ -9,6 +9,8 @@ class RepliesController < ApplicationController
   def create
   	@reply = @topic.replies.new(reply_params)
   	@reply.user_id = current_user.id
+  	@subforum = @topic.subforum
+  	@reply.subforum_id = @subforum.id
   	if @reply.save
   		redirect_to @topic
   	else
