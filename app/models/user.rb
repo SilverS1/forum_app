@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   }
   
   validate :validate_username
+  has_many :topics
+  has_many :replies
 
 def validate_username
   if User.where(email: username).exists?

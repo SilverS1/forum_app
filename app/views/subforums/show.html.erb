@@ -1,4 +1,7 @@
 <% @subforum.topics.each do |topic| %>
-	<%= topic.title %>
+	<%= link_to topic.title, topic_path(topic) %>
 	<%= topic.content %>
+	<%= topic.user_id %>
+	<%= topic.subforum_id %>
+	<br>
 <% end %>

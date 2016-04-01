@@ -99,6 +99,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.99.1)
+    mime-types-data (3.2016.0221)
     mimemagic (0.3.0)
     mini_magick (3.8.0)
       subexec (~> 0.2.1)
@@ -205,6 +206,7 @@ DEPENDENCIES
   devise (~> 3.4.0)
   jbuilder (~> 2.0)
   jquery-rails
+  mime-types-data
   mini_magick (= 3.8.0)
   mysql2 (~> 0.3.18)
   paperclip
@@ -221,4 +223,4 @@ DEPENDENCIES
   will_paginate (= 3.0.7)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

@@ -14,6 +14,7 @@ gem 'thin' # Fixes some sort of problem I can't remember.
 
 gem 'mysql2', '~> 0.3.18' 
 gem 'devise', '~> 3.4.0' 
+gem 'mime-types-data'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

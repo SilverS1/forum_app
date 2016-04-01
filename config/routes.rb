@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
 
-	
+
   devise_for :users
   root 'static_pages#home'
   
-  resources :subforums do
-  	resources :topics
+  resources :subforums, shallow: true do
+  	resources :topics do
+  		resources :replies
+  	end
   end
   
-   devise_for :users
-	 resources :products do
-	 	resources :comments, only: [:new, :create, :index]
-	 	member do
-	 		put "upvote" => "products#upvote"
-	 	end
-	 end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

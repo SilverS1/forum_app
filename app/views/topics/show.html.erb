@@ -1,0 +1,9 @@
+<%= @topic.title %>
+<%= @topic.subforum_id %>
+<%= render 'replies/form' %>
+
+<% @topic.replies.each do |reply| %>
+	<%= reply.content %>
+	<%= reply.user.username %>
+	<br>
+<% end %>
