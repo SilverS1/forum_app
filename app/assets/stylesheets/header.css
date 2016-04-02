@@ -10,10 +10,29 @@
 	color: white;
 }
 
-.header-logged-out {
+.header-left {
+	display: inline-block;
+	line-height: 1px;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.header-home-icon {
+	height: 16px;
+	width: 18px;
 	float: left;
+	margin: 0 8px;
+}
+
+.header-home-link {
+	float: right;
+}
+
+.header-logged-out {
+	float: right;
 	line-height: 1px;
 	margin: 10px;
+	display: inline-block;
 }
 
 .signin-logo {
@@ -43,7 +62,7 @@
 }
 
 .header-logged-in {
-	float: left;
+	float: right;
 	margin: 5px;
 }
 

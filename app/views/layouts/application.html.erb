@@ -10,6 +10,11 @@
 
 	<header class = "header group">
 		
+		<div  class = "header-left group">
+			<%= image_tag("home.png", class: "header-home-icon group") %>
+			<%= link_to "Home", root_path, class: "header-home-link group" %>
+		</div>
+		
 		<% if user_signed_in? %>
 			<div class = "header-logged-in group" >
 				<%= image_tag(current_user.avatar, class: "header-profile-pic group") %>
@@ -26,8 +31,23 @@
 		<% end %>
 		
 	</header>
+	
+	<div class = "hero">
+	
+		<nav class = "hero-nav">
+			<%= link_to "Community", '#', class: "hero-nav-a" %>
+			<%= link_to "Guides", '#', class: "hero-nav-a" %>
+			<%= link_to "Shop", '#', class: "hero-nav-a" %>
+			<%= link_to "Help", '#', class: "hero-nav-a" %>
+		</nav>
+	
+	</div>
+	
+	<div class = "main-wrapper group">
 
-<%= yield %>
+		<%= yield %>
+
+	</div>
 
 </body>
 </html>

@@ -7,7 +7,7 @@
 	<div class = "section-page-right group">
 		<div class = "section-page-stats group">
 			<p class = "section-page-threads group"><%= subforum.topics.size %> Topics</p>
-			<p class = "section-page-posts group"><%= subforum.replies.size %> Posts</p>
+			<p class = "section-page-posts group"><%= subforum.replies.size %> Replies</p>
 		</div>
 		<% subforum.topics.order("created_at DESC").limit(1).each do |topic| %>
 		<div class = "section-page-recent-thread-section">

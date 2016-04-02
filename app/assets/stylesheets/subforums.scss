@@ -1,3 +1,49 @@
-// Place all the styles related to the subforums controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.subforum-show-header {
+	height: 75px;
+	padding: 10px 10px;
+	background: linear-gradient(to bottom, #525252 0%,#525252 50%,#525252 50%,#3B3B3B 50%,#3B3B3B 100%);
+	border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: 5px;
+}
+
+.subforum-show-header-left {
+	display: inline-block;
+	float: left;
+}
+
+.subforum-show-title {
+	font-size: 22px;
+	letter-spacing: .5px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.subforum-show-description {
+	letter-spacing: .5px;
+	float: left;
+	clear: both;
+}
+
+.subforum-show-header-right {
+	display: inline-block;
+	float: right;
+}
+
+.subforum-show-newtopic {
+	margin: 10px;
+	background-color: black;
+	border-radius: 3px;
+	width: 165px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	float: right; 
+	border: 1px solid gray;
+}
+
+.subforum-show-newtopic a { 
+	font-size: 16px;
+}
+
+
