@@ -28,7 +28,7 @@ class SubforumsController < ApplicationController
 	
 	def show
 		@subforum = Subforum.find(params[:id])
-		@topic = @subforum.topics.paginate(:per_page => 12, :page => params[:page])
+		# @topic = @subforum.topics.paginate(:per_page => 12, :page => params[:page]) 
 	end
 	
 	def destroy

@@ -1,0 +1,32 @@
+.topic-show-header {
+	height: 75px;
+	padding: 10px 10px;
+	background: linear-gradient(to bottom, #525252 0%,#525252 50%,#525252 50%,#3B3B3B 50%,#3B3B3B 100%);
+	border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: 5px;
+}
+
+.topic-show-header-left {
+	display: inline-block;
+	float: left;
+}
+
+.topic-show-title {
+	font-size: 22px;
+	letter-spacing: .5px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.topic-show-description {
+	letter-spacing: .5px;
+	float: left;
+	clear: both;
+	font-size: 10px;
+}
+
+.topic-show-first-post {
+	
+}
+

@@ -1,5 +1,21 @@
-<%= @topic.title %>
-<%= @topic.subforum_id %>
+<div class = "topic-show-header">
+	<div class = "topic-show-header-left">
+		<h1 class = "topic-show-title"><%= @topic.title %></h1>
+		<p class = "topic-show-description">Started by <%= @topic.user.username %>, <%= @topic.created_at.strftime("%d %b %Y")%></p>
+	</div>
+</div>
+
+<div class = "topic-show-posts">
+
+	<div class = "topic-show-user-info">
+		<%= image_tag(@topic.user.avatar, class: "topic-show-user-avatar") %>
+		<p class = "topic-show-user-replies"><%= @topic.user.replies.size %> Posts</p>
+	</div>
+	<div class = "">
+	</div>
+	
+</div>
+
 <%= render 'replies/form' %>
 
 <% @topic.replies.each do |reply| %>

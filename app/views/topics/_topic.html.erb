@@ -2,6 +2,7 @@
 			
 	<div class = "topic-page-left group">
 		<%= link_to topic.title, topic_path(topic), class: "topic-page-title group" %>
+		<p class = "topic-page-description group"><%= topic.created_at%></p>
 	</div>
 	
 	<div class = "topic-page-right group">

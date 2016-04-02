@@ -8,10 +8,10 @@
 	</div>
 </div>
 
-	<% @subforum.topics.each do |topic| %>
+	<% @subforum.topics.order("created_at DESC").each do |topic| %>
 	
-				<%= render topic %>
-				
-			<% end %>
+		<%= render topic %>
+		
+	<% end %>
 
 
