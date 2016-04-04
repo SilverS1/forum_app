@@ -53,15 +53,10 @@
 	margin-top: 16px;
 }
 
-.topic-show-posts {
-	/* background-color: green; */
-}
-
 .topic-show-user-info {
 	width: 17%;
 	padding: 15px;
 	float: left;
-	/* background-color: blue; */
 	height: 100%;
 	display: inline-block;
 }
@@ -71,22 +66,29 @@
 	height: 70%;
 	margin: 0 auto;
 	display: block;
+	
 }
 
 .topic-show-user-replies {
 	text-align: center;
 	margin: 5px 0;
+	font-size: 10px;
+}
+
+.topic-show-user-joined {
+	text-align: center;
+	margin: 5px 0;
+	color: darkgray;
+	font-size: 10px;
 }
 
 .topic-show-reply-content {
 	width: 100%;
 	float: left;
-	/* background-color: red; */
 	height: 100%;
 }
 
 .topic-show-reply-words {
-	/* background-color: green; */
 	width: 80%;
 	display: inline-block;
 	padding: 10px;
@@ -94,6 +96,3 @@
 	font-size: 14px;
 }
 
-.topic-show-reply-text {
-	
-}

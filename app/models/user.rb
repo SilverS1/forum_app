@@ -9,20 +9,19 @@ class User < ActiveRecord::Base
   :uniqueness => {
     :case_sensitive => false
   }
-  
   validate :validate_username
   has_many :topics
   has_many :replies
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
-def validate_username
-  if User.where(email: username).exists?
-    errors.add(:username, :invalid)
+  def validate_username
+    if User.where(email: username).exists?
+      errors.add(:username, :invalid)
+    end
   end
-end
 
-def self.find_first_by_auth_conditions(warden_conditions)
+  def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
       if login.start_with?('+')
@@ -33,6 +32,10 @@ def self.find_first_by_auth_conditions(warden_conditions)
     else
       where(conditions).first
     end
+  end
+  
+  def admin?
+	admin
   end
   
 end

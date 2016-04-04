@@ -1,30 +1,33 @@
-<div class = "section-page group">
+<div class = "page-section">
 			
-	<div class = "section-page-left group">
-		<%= link_to subforum.title, subforum_path(subforum), class: "section-page-title group" %>
-		<p class = "section-page-description group"><%= subforum.description %></p>
+	<div class = "page-section-left">
+		<%= link_to subforum.title, subforum_path(subforum), class: "page-section-title" %>
+		<p class = "page-section-description"><%= subforum.description %></p>
 	</div>
-	<div class = "section-page-right group">
-		<div class = "section-page-stats group">
-			<p class = "section-page-threads group"><%= subforum.topics.size %> Topics</p>
-			<p class = "section-page-posts group"><%= subforum.replies.size %> Replies</p>
+	
+	<div class = "page-section-right">
+	
+		<div class = "page-section-stats">
+			<p class = "page-section-threads"><%= subforum.topics.size %> Topics</p>
+			<p class = "page-section-posts"><%= subforum.replies.size %> Replies</p>
 		</div>
+		
 		<% subforum.topics.order("created_at DESC").limit(1).each do |topic| %>
-		<div class = "section-page-recent-thread-section">
-			<%= image_tag(topic.user.avatar, class: "section-page-recent-user group") %>
-			<div class = "section-page-recent-thread-section-2">
-				<% if topic.title.size > 30 %>
-					<p class = "section-page-recent-thread-title"><%= topic.title[0..25] %>...</p>
-				<% else %>				
-					<p class = "section-page-recent-thread-title"><%= topic.title %></p>
-				<% end %>
-					<p class = "section-page-recent-thread group"><%= topic.user.username %></p>
-				<% end %>
-				
-				
+			<div class = "page-section-recent-thread-section">
+				<%= image_tag(topic.user.avatar, class: "page-section-recent-user") %>
+				<div class = "page-section-recent-thread-section-2">
+					<% if topic.title.size > 30 %>
+						<p class = "page-section-recent-thread-title"><%= topic.title[0..25] %>...</p>
+					<% else %>				
+						<p class = "page-section-recent-thread-title"><%= topic.title %></p>
+					<% end %>
+						<p class = "page-section-recent-thread"><%= topic.user.username %></p>
+				</div>
 			</div>
-		</div>
+		<% end %>
+				
+			
 	</div>
-
+	
 </div>
 			

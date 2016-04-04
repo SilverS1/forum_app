@@ -8,25 +8,25 @@
 </head>
 <body>
 
-	<header class = "header group">
+	<header class = "header">
 		
-		<div  class = "header-left group">
-			<%= image_tag("home.png", class: "header-home-icon group") %>
-			<%= link_to "Home", root_path, class: "header-home-link group" %>
+		<div  class = "header-left">
+			<%= image_tag("home.png", class: "header-home-icon") %>
+			<%= link_to "Home", root_path, class: "header-home-link" %>
 		</div>
 		
 		<% if user_signed_in? %>
-			<div class = "header-logged-in group" >
-				<%= image_tag(current_user.avatar, class: "header-profile-pic group") %>
-				<%= link_to current_user.username , '#', class: "header-username group" %>
-				<%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "header-logout group" %>
+			<div class = "header-logged-in" >
+				<%= image_tag(current_user.avatar, class: "header-profile-pic") %>
+				<%= link_to current_user.username , '#', class: "header-username" %>
+				<%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "header-logout" %>
 			</div>
 		<% else %>
-			<div class = "header-logged-out group">
-				<%= image_tag('key.png', class: "signin-logo group" ) %>
-				<%= link_to "Sign In", new_user_session_path, class: "header-sign-in group" %>
-				<%= image_tag('register.png', class: "register-logo group" ) %>
-				<%= link_to "Register", new_user_registration_path, class: "header-register group" %>
+			<div class = "header-logged-out">
+				<%= image_tag('key.png', class: "header-signin-logo" ) %>
+				<%= link_to "Sign In", new_user_session_path, class: "header-sign-in" %>
+				<%= image_tag('register.png', class: "header-register-logo" ) %>
+				<%= link_to "Register", new_user_registration_path, class: "header-register" %>
 			</div>
 		<% end %>
 		
@@ -35,10 +35,10 @@
 	<div class = "hero">
 	
 		<nav class = "hero-nav">
-			<%= link_to "Community", '#', class: "hero-nav-a" %>
-			<%= link_to "Guides", '#', class: "hero-nav-a" %>
-			<%= link_to "Shop", '#', class: "hero-nav-a" %>
-			<%= link_to "Help", '#', class: "hero-nav-a" %>
+			<%= link_to "Community", '#', class: "hero-nav-link" %>
+			<%= link_to "Guides", '#', class: "hero-nav-link" %>
+			<%= link_to "Shop", '#', class: "hero-nav-link" %>
+			<%= link_to "Help", '#', class: "hero-nav-link" %>
 		</nav>
 	
 	</div>

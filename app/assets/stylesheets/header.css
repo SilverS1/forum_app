@@ -13,19 +13,18 @@
 .header-left {
 	display: inline-block;
 	line-height: 1px;
-	margin: 5px;
-	margin-top: 10px;
+	margin: 10px 5px 5px 5px;
 }
 
 .header-home-icon {
 	height: 16px;
 	width: 18px;
-	float: left;
 	margin: 0 8px;
+	float: left;
 }
 
 .header-home-link {
-	float: right;
+	
 }
 
 .header-logged-out {
@@ -35,7 +34,7 @@
 	display: inline-block;
 }
 
-.signin-logo {
+.header-signin-logo {
 	height: 15px;
 	width: 15px;
 	float: left;
@@ -51,14 +50,10 @@
 	float: left;
 }
 
-.register-logo {
+.header-register-logo {
 	height: 15px;
 	width: 15px;
 	float: left;
-}
-
-.main-wrapper {
-	margin: 0 5%;
 }
 
 .header-logged-in {

@@ -8,6 +8,7 @@
 		<div class = "topic-show-user-info group">
 			<%= image_tag(reply.user.avatar, class: "topic-show-user-avatar") %>
 			<p class = "topic-show-user-replies"><%= reply.user.replies.size %> Posts</p>
+			<p class = "topic-show-user-joined">Joined <%= reply.user.created_at.strftime("%d %b %Y") %></p>
 		</div>
 		<div class = "topic-show-reply-words"><%= reply.content %></div>
 	</div>

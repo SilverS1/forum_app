@@ -8,7 +8,6 @@
 	content: " ";
 }
 
-
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
@@ -20,15 +19,17 @@ html {
  	background-color: black;
 	color: white;
 	height: 1000px;
-
 }
 
 * {
-	font-family: proxima-nova, Proxima Nova, helvetica, arial, sans-serif;
 	font: normal 12px "lucida grande", "lucida sans unicode", arial, verdana, tahoma, sans-serif;
 }
 
 a {
 	text-decoration: none;
 	color: white;
+}
+
+.main-wrapper {
+	margin: 0 5%;
 }

@@ -3,24 +3,23 @@
 *******************/
 
 .hero {
-	background-image: url("bannersmoky.png");
+	background: url("bannersmoky.png") no-repeat;
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
 	height: 100px;
 }
 
 .hero-nav {
 	float: right;
 	width: 280px;
+	height: 33px;
 	background-color: #3B3B3B;
 	margin: 32px 50px 0 0;
-	height: 33px;
 	padding: 4px 0;
 	border-radius: 5px;
 	border: 1px solid black;
 }
 
-.hero-nav-a {
+.hero-nav-link {
 	list-style-type: none;
 	display: inline-block;
 	font-size: 14px;
@@ -30,7 +29,7 @@
 	color: #A6A6A6;
 }
 
-.hero-nav-a:hover {
+.hero-nav-link:hover {
 	background-color: gray;
 	cursor: pointer;
 	border-radius: 5px;

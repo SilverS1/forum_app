@@ -20,16 +20,15 @@
 				</div>				
 			</div>
 		<% else %>
-		
-		<% topic.replies.order("created_at DESC").limit(1).each do |reply| %>
-			<div class = "topic-page-recent-thread-topic group">
-				<%= image_tag(reply.user.avatar, class: "topic-page-recent-user group") %>
-				<div class = "topic-page-recent-thread-topic-2">				
-					<p class = "topic-page-recent-thread-title"><%= reply.user.username %></p>
-					<p class = "topic-page-recent-thread group"><%= reply.created_at.strftime("%d %b %Y") %></p>
-				</div>				
-			</div>
-		<% end %>
+			<% topic.replies.order("created_at DESC").limit(1).each do |reply| %>
+				<div class = "topic-page-recent-thread-topic group">
+					<%= image_tag(reply.user.avatar, class: "topic-page-recent-user group") %>
+					<div class = "topic-page-recent-thread-topic-2">				
+						<p class = "topic-page-recent-thread-title"><%= reply.user.username %></p>
+						<p class = "topic-page-recent-thread group"><%= reply.created_at.strftime("%d %b %Y") %></p>
+					</div>				
+				</div>
+			<% end %>
 		
 		<% end %>
 	</div>
