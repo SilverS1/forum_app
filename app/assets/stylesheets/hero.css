@@ -10,24 +10,24 @@
 
 .hero-nav {
 	float: right;
-	width: 280px;
+	width: 350px;
 	height: 33px;
-	background-color: #3B3B3B;
 	margin: 32px 50px 0 0;
 	padding: 4px 0;
 	border-radius: 5px;
-	border: 1px solid black;
 }
 
 .hero-nav-link {
 	list-style-type: none;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 16px;
+	letter-spacing: 1px;
 	float: left;
 	margin: 0 8px;
 	padding: 3px;
-	color: #A6A6A6;
+	color: white;
 }
+/* 
 
 .hero-nav-link:hover {
 	background-color: gray;
@@ -35,3 +35,4 @@
 	border-radius: 5px;
 	color: white;
 }
+ */
