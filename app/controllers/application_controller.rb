@@ -32,6 +32,10 @@ def login=(login)
   def login
     @login || self.username || self.email
   end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to topic_url
+  end
   
   protected 
   

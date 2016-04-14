@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
 
-
+	impressionist :actions => [:show]
 	before_action :authenticate_user!
 
 	def new

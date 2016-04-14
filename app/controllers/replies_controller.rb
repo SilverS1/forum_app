@@ -1,6 +1,6 @@
 class RepliesController < ApplicationController
 
-	before_action :set_topic
+	before_action :set_topic, only: [:new, :create]
 
   def new
   	@reply = @topic.replies.new
@@ -18,7 +18,11 @@ class RepliesController < ApplicationController
   	end
   end
 
+
   def destroy
+    authorize! :destroy, @reply
+    @reply = Reply.find(params[:id]).destroy
+    redirect_to :back
   end
   
   def reply_params

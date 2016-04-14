@@ -8,7 +8,7 @@
 	<div class = "topic-page-right group">
 		<div class = "topic-page-stats group">
 			<p class = "topic-page-threads group"><%= topic.replies.size %> Replies</p>
-			<p class = "topic-page-posts group">Views</p>
+			<p class = "topic-page-posts group"><%= "#{topic.impressionist_count}" %> Views</p>
 		</div>
 
 		<% if topic.replies.size < 1 %>

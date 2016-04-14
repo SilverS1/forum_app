@@ -10,6 +10,7 @@ gem 'mini_magick', '3.8.0' # used for resizing images
 gem 'paperclip'
 gem 'rmagick' # used for resizing images with carrierwave
 gem 'devise', '~> 3.4.0'
+gem 'cancan'
 
 #----------------
 # views
@@ -39,6 +40,7 @@ gem 'rack-mini-profiler' # displays speed badge for every html page
 
 gem 'thin' # web server
 gem 'mime-types-data'
+gem 'impressionist'
 
 #----------------
 # security

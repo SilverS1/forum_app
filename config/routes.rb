@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
 
-  devise_for :admins
   devise_for :users
   root 'static_pages#home'
+  get 'profile' => 'profiles#show'
   
   resources :subforums, shallow: true do
   	resources :topics do
