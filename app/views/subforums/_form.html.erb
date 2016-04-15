@@ -1,17 +1,20 @@
-<div class = "row">
-	<div class = "col-md-6 col-md-offset-3">
+<div>
+	<div>
 		<%= form_for(@subforum) do |f| %>
 
 			<%= f.label :title %>
-			<%= f.text_field :title, class: "form-control" %>
+			<%= f.text_field :title %>
 		  
 			<%= f.label :description %>
-			<%= f.text_field :description, class: "form-control" %>
+			<%= f.text_field :description %>
+
+			<%= f.label :subheading %>
+			<%= f.select :subheading, options_for_select(Subforum::SUBHEADINGS, @subforum.subheading) %>
 		 
 		 	<% if current_page?(controller: 'subforums', action: 'new') %>
-				<%= f.submit  "Create Subforum", class: "btn btn-primary", data: {disable_with: "Creating..."} %> 
+				<%= f.submit  "Create Subforum", data: {disable_with: "Creating..."} %> 
 			<% else current_page?(controller: 'subforums', action: 'edit') %>
-				<%= f.submit  "Edit Subforum", class: "btn btn-primary", data: {disable_with: "Updating..."} %>
+				<%= f.submit  "Edit Subforum",  data: {disable_with: "Updating..."} %>
 			<% end %>
 		  
 		<% end %>

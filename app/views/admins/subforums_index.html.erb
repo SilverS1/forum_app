@@ -1,0 +1,7 @@
+<% @subforums.each do |subforum| %>
+	<p><%= subforum.title %></p>
+	<p><%= subforum.description %></p>
+	<%= link_to "Edit", edit_subforum_path(subforum) %>
+<% end %>
+
+<%= link_to "New Subforum", new_subforum_path %>

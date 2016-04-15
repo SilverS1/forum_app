@@ -2,17 +2,11 @@
 
 		<div class = "pages-section group">
 			
-			<div class = "section-title group">
-				<h1 class = "section-title-words group" >Main</h1>
-			</div>
-			
-			<div class = "sections">
-			
-			<% @subforums.each do |subforum| %>
-				<%= render subforum %>
-			<% end %>
-			
-			</div>
+			<%= render 'main' %>
+
+			<%= render 'secondary' %>
+
+			<%= render 'miscellaneous' %>
 			
 			
 		</div>

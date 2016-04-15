@@ -1,24 +1,27 @@
 Rails.application.routes.draw do
 
+  # Basic
+  root 'static_pages#home'
 
+  # User interface
   devise_for :users
+  get 'profile' => 'profiles#show'
+
+  # Admins
   scope "/admin" do
     resources :users, :controller => "users"
   end
-  root 'static_pages#home'
-  get 'profile' => 'profiles#show'
+  get 'dashboard' => 'admins#dashboard'
+  get 'subforums_index' => 'admins#subforums_index'
+  get 'users_index' => 'admins#users_index'
   
+  # Resources
   resources :subforums, shallow: true do
   	resources :topics do
   		resources :replies
   	end
   end
 
-
-
-
-
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

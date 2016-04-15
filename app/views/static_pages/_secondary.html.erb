@@ -1,0 +1,13 @@
+<div class = "section-title group">
+	<h1 class = "section-title-words group" >Secondary</h1>
+</div>
+	
+<div class = "sections">
+	
+	<% @subforums.each do |subforum| %>
+		<% if subforum.subheading == "Secondary" %>
+			<%= render subforum %>
+		<% end %>
+	<% end %>
+
+</div>

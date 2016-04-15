@@ -17,6 +17,9 @@
 		
 		<% if user_signed_in? %>
 			<div class = "header-logged-in" >
+				<% if current_user.admin? %>
+					<p class = "header-username"><%= link_to "Dashboard", dashboard_path %></p>
+				<% end %>
 				<%= link_to(profile_path) do %>
 					<%= image_tag(current_user.avatar, class: "header-profile-pic") %>
 					<p class = "header-username"><%= current_user.username %></p>

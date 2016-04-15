@@ -1,5 +1,8 @@
 class SubforumsController < ApplicationController
 
+	load_and_authorize_resource
+	skip_authorize_resource :only => :show
+
 	def new
 		@subforum = Subforum.new
 	end
@@ -35,7 +38,7 @@ class SubforumsController < ApplicationController
 	end
 	
 	def subforum_params
-		params.require(:subforum).permit(:title, :description)
+		params.require(:subforum).permit(:title, :description, :subheading)
 	end
 
 end

@@ -29,12 +29,6 @@ gem 'mysql2', '~> 0.3.18'
 gem "bullet", :group => "development" # helps alert you for N+1 queries, which are bad
 
 #----------------
-# backstage-info
-#----------------
-
-gem 'rack-mini-profiler' # displays speed badge for every html page
-
-#----------------
 # other
 #----------------
 
