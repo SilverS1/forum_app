@@ -1,5 +1,5 @@
 class RepliesController < ApplicationController
-
+  
 	before_action :set_topic, only: [:new, :create]
 
   def new

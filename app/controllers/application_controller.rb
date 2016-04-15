@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
   skip_before_filter :verify_authenticity_token  
   skip_before_action :verify_authenticity_token
   after_filter :store_location
+  include CanCan::ControllerAdditions
+  protect_from_forgery
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = exception.message
+    redirect_to root_url
+  end
 
 def store_location
   # store last url - this is needed for post-login redirect to whatever the user last visited.
@@ -33,13 +39,7 @@ def login=(login)
     @login || self.username || self.email
   end
 
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to topic_url
-  end
-  
   protected 
-  
-  
 
  def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :remember_me, :avatar) }

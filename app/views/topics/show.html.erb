@@ -11,15 +11,23 @@
 
 	<div class = "topic-show-user-header group">
 		<p class = "topic-show-user-username"><%= @topic.user.username %></p>
-		<p class = "topic-show-reply-number">#1</p>
+
+		<div class = "topic-show-user-right">
+			<% if can? :destroy, @topic %>
+				<p class = "topic-show-reply-number"><%= link_to "Delete Topic", @topic, method: :delete, data: {confirm: "You sure?"} %></p>
+			<% end %>
+			<p class = "topic-show-reply-number">#1</p>
+		</div>
 	</div>
+
+
 	<div class = "topic-show-reply-content group">
 		<div class = "topic-show-user-info">
 			<%= image_tag(@topic.user.avatar, class: "topic-show-user-avatar") %>
 			<p class = "topic-show-user-replies"><%= @topic.user.replies.size %> Posts</p>
 		</div>
 		<div class = "topic-show-reply-words"><%= @topic.content %></div>
-	</div>
+	</div> 
 	
 </div>
 

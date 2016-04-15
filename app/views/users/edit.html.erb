@@ -1,0 +1,34 @@
+<h1>Edit <%= @user.username %></h1>
+
+<%= form_for(@user) do |f| %>
+
+	<div class="field">
+    <%= f.label :username %><br />
+    <%= f.email_field :username, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+
+  <%= image_tag(@user.avatar) %>
+
+  
+  <div class="form-group">
+	<%= f.label :avatar, class: 'col-sm-2 control-label'  %>
+	<div class="col-sm-6">
+		<%= f.file_field :avatar %>
+	</div>
+  </div>
+
+    <div class="field">
+	    <%= f.label :admin %><br />
+	    <%= f.check_box :admin, autocomplete: "off" %>
+	  </div>
+
+  <div class="actions">
+    <%= f.submit "Edit user" %>
+  </div>
+<% end %>

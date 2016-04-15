@@ -1,5 +1,4 @@
 class TopicsController < ApplicationController
-
 	impressionist :actions => [:show]
 	before_action :authenticate_user!
 
@@ -35,6 +34,12 @@ class TopicsController < ApplicationController
 	def show
 		@topic = Topic.find(params[:id])
 		@reply = Reply.new
+	end
+
+	def destroy
+		authorize! :destroy, @topic
+		@topic = Topic.find(params[:id]).destroy
+		redirect_to root_path
 	end
 	
 	def topic_params

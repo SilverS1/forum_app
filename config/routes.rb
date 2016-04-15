@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  scope "/admin" do
+    resources :users, :controller => "users"
+  end
   root 'static_pages#home'
   get 'profile' => 'profiles#show'
   
@@ -10,6 +13,11 @@ Rails.application.routes.draw do
   		resources :replies
   	end
   end
+
+
+
+
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.

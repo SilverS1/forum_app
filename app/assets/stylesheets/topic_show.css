@@ -45,12 +45,15 @@
 	float: left;
 }
 
-.topic-show-reply-number {
+.topic-show-user-right {
 	float: right;
+}
+
+.topic-show-reply-number {
 	display: inline-block;
 	line-height: 1px;
 	margin: 5px;
-	margin-top: 16px;
+	margin-top: 10px;
 }
 
 .topic-show-user-info {

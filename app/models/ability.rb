@@ -13,6 +13,12 @@ class Ability
             reply.user == user
         end
 
+        can :destroy, Topic do |topic|
+          topic.user == user
+        end
+
+        
+
         
 
     end
