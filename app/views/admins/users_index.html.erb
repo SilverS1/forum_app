@@ -1,7 +1,13 @@
+
+<div class = "admin-users-container">
 <% @users.each do |user| %>
-	<p><%= user.username %></p>
-	<%= link_to "Edit", edit_user_path(user) %>
-	<%= user.admin? %>
+	<div class = "admin-users-info group">
+		<%= image_tag(user.avatar, class: "admin-users-info-avatar") %>
+		<p><%= user.username %></p>
+		<%= link_to "Edit", edit_user_path(user) %>
+		<p>Admin: <%= user.admin? %></p>
+	</div>
 <% end %>
 
 <%= link_to "New User", new_user_path %>
+</div>

@@ -13,8 +13,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "Successfully created User." 
-      redirect_to users_path
+      if current_user.admin?
+        redirect_to users_index_url
+      else
+        redirect_to users_path
+      end
     else
       render :action => 'new'
     end
@@ -29,8 +32,11 @@ class UsersController < ApplicationController
     params[:user].delete(:password) if params[:user][:password].blank?
     params[:user].delete(:password_confirmation) if params[:user][:password].blank? and params[:user][:password_confirmation].blank?
     if @user.update_attributes(user_params)
-      flash[:notice] = "Successfully updated User."
-      redirect_to users_path
+      if current_user.admin?
+        redirect_to users_index_url
+      else
+        redirect_to users_path
+      end
     else
       render :action => 'edit'
     end

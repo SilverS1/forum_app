@@ -2,8 +2,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    
-    if user.admin?
+    user ||= User.new
+    if user && user.admin?
 
     	can :manage, :all
 
@@ -17,11 +17,8 @@ class Ability
           topic.user == user
         end
 
-        
-
-        
-
     end
+
 
   end
 end

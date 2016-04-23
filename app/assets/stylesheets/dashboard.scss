@@ -1,0 +1,59 @@
+.dashboard-links {
+	width: 70%;
+	height: 300px;
+	margin: 50px auto;
+	/*background-color: yellow;*/
+	padding: 20px;
+}
+
+.dashboard-links a {
+	font-size: 24px;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.dashboard-links a:hover {
+	background-color: white;
+	color: black;
+}
+
+.dashboard-links-top {
+	/*background-color: red;*/
+}
+
+.dashboard-links-bottom {
+	/*background-color: green;*/
+	/*margin-top: 120px;*/
+}
+
+.dashboard-users-link {
+	float: left;
+	display: inline-block;
+	border: 1px solid white;
+	padding: 80px 120px;
+	width: 350px;
+}
+
+.dashboard-subforums-link {
+	float: right;
+	display: inline-block;
+	border: 1px solid white;
+	padding: 80px 120px;
+	width: 350px;
+}
+
+.dashboard-topics-link {
+	float: left;
+	display: inline-block;
+	border: 1px solid white;
+	padding: 80px 120px;
+	width: 350px;
+}
+
+.dashboard-stats-link {
+	float: right;
+	display: inline-block;
+	border: 1px solid white;
+	padding: 80px 120px;
+	width: 350px;
+}

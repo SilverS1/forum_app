@@ -1,2 +1,14 @@
-<%= link_to "Users", users_index_path %>
-<%= link_to "Subforums", subforums_index_path %>
+
+<div class = "dashboard-links group">
+	<div class = "dashboard-links-top group">
+		<%= link_to "Users", users_index_path, class: "dashboard-users-link" %>
+		<%= link_to "Subforums", subforums_index_path, class: "dashboard-subforums-link" %>
+	</div>
+	<div class = "dashboard-links-bottom group">
+		<%= link_to "Topics", topics_index_path, class: "dashboard-topics-link" %>
+		<%= link_to "Statistics", statistics_path, class: "dashboard-stats-link" %>
+	</div>
+</div>
+
+
+

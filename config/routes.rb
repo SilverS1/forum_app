@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'dashboard' => 'admins#dashboard'
   get 'subforums_index' => 'admins#subforums_index'
   get 'users_index' => 'admins#users_index'
+  get 'topics_index' => 'admins#topics_index'
+  get 'statistics' => 'admins#statistics'
   
   # Resources
   resources :subforums, shallow: true do

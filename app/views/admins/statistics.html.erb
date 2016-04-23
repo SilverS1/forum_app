@@ -1,0 +1,15 @@
+<div class = "stats-impressions-chart">
+	<%= pie_chart Impression.group(:impressionable_id).count, width: "450px", :library => {title: "Page Hits by User"} %>
+</div>
+
+<div class = "stats-impressions-chart">
+	<%= pie_chart Reply.group(:user).count, width: "380px", :library => {title: "Replies by User"} %>
+</div>
+
+<div class = "stats-impressions-chart">
+	<%= pie_chart User.group(:last_sign_in_at).count, width: "380px" %>
+</div>
+
+<div class = "stats-impressions-chart">
+	<%= pie_chart Impression.group(:user_id).count, width: "380px" %>
+</div>
